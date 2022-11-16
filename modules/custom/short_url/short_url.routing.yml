@@ -1,0 +1,15 @@
+short_url.form:
+  path: '/short_url/123'
+  defaults:
+    _title: 'Shorten the URL'
+    _form: '\Drupal\short_url\Form\ShortenurlForm'
+  requirements:
+    _permission: 'access content'
+
+shorturl.info_page: 
+  path: '/view/abcd123' 
+  defaults: 
+    _controller: '\Drupal\short_url\Controller\InfoPageController::infoPage' 
+    _title: 'Info about shortened URL' 
+  requirements: 
+    _permission: 'access content'

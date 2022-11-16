@@ -1,0 +1,6 @@
+name: Shorten URL Module
+description: 'Module for creating short URLs from long ones.'
+type: module
+version: 1.0
+package: Custom Tasks
+core_version_requirement: ^8||^9

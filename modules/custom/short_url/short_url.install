@@ -1,0 +1,35 @@
+<?php
+use Drupal\Core\Database\Database;
+ 
+/**
+ * Implements hook_schema().
+ */
+function short_url_schema() {
+  $schema['urlshorten'] = [
+    'description' => 'The table for storing the shortened url.',
+    'fields' => [
+      'id' => array(
+        'description' => 'The primary identifier for url',
+        'type' => 'serial',
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+      ),
+      'long_url' => array(
+        'description' => 'Long URL',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'short_url' => array(
+        'description' => 'Short URL',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+    ],
+    'primary key' => ['id'],
+  ];
+  return $schema;
+}
